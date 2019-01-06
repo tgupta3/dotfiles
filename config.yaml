@@ -50,7 +50,7 @@ profiles:
     - f_package.list
     - d_fonts
     - d_zsh-autosuggestions 
-   work_ubuntu:
+  work_ubuntu:
     dotfiles:
     - f_vimrc
     - f_zshrc
