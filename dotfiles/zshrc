@@ -121,5 +121,8 @@ source $ZSH/oh-my-zsh.sh
 #fi
 
 {%@@ if profile == "work_mac" @@%}
+export DOTDROP_PROFILE=work_mac  
 ssh-add -K ~/linux_instance.pem
+{%@@ elif profile == "home" @@%}
+export DOTDROP_PROFILE=home
 {%@@ endif @@%}
