@@ -13,6 +13,9 @@ dotfiles:
   d_fonts:
     dst: ~/.local/share/fonts
     src: local/share/fonts
+  d_i3:
+    dst: ~/.config/i3
+    src: config/i3
   d_zsh-autosuggestions:
     dst: ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
     src: oh-my-zsh/custom/plugins/zsh-autosuggestions
@@ -41,6 +44,7 @@ profiles:
     - f_package.list
     - d_fonts
     - d_zsh-autosuggestions
+    - d_i3
   work_mac:
     dotfiles:
     - f_vimrc
@@ -49,12 +53,10 @@ profiles:
     - f_github.cson
     - f_package.list
     - d_fonts
-    - d_zsh-autosuggestions 
+    - d_zsh-autosuggestions
   work_ubuntu:
     dotfiles:
     - f_vimrc
     - f_zshrc
     - d_fonts
-    - d_zsh-autosuggestions 
-  
-
+    - d_zsh-autosuggestions
