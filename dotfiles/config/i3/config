@@ -166,7 +166,7 @@ exec --no-startup-id xinput set-prop 12 274 1
 exec --no-startup-id xinput set-prop 12 282 1
 
 #set external monitor
-exec --no-startup-id python3 /home/tushar/.setmonitor/setOutput.py
+exec --no-startup-id python3 $HOME/.setmonitor/setOutput.py 
 
 #set wallapper
 exec --no-startup-id feh --bg-fill /usr/share/backgrounds/Cathédrale_Marie-Rheine-du-Monde_by_Thierry_Pon.jpg
