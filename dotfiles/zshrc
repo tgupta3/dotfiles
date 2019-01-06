@@ -115,7 +115,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias config='/usr/bin/git --git-dir=$HOME/.cfgs/ --work-tree=$HOME'
-if [ "$(uname 2> /dev/null)" != "Linux" ]; then
-      ssh-add -K ~/linux_instance.pem
-fi
+#alias config='/usr/bin/git --git-dir=$HOME/.cfgs/ --work-tree=$HOME'
+#if [ "$(uname 2> /dev/null)" != "Linux" ]; then
+#      ssh-add -K ~/linux_instance.pem
+#fi
+
+{%@@ if profile == "work_mac" @@%}
+ssh-add -K ~/linux_instance.pem
+{%@@ endif @@%}

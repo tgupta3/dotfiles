@@ -41,3 +41,12 @@ profiles:
     - f_package.list
     - d_fonts
     - d_zsh-autosuggestions
+  work_mac:
+    dotfiles:
+    - f_vimrc
+    - f_zshrc
+    - f_config.cson
+    - f_github.cson
+    - f_package.list
+    - d_fonts
+    - d_zsh-autosuggestions 
