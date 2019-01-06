@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -158,17 +158,12 @@ bindsym $mod+r mode "resize"
 #enable tint2
 exec --no-startup-id tint2
 
+#set wallapper
+exec --no-startup-id feh --bg-scale /usr/share/backgrounds/Cathédrale_Marie-Rheine-du-Monde_by_Thierry_Pon.jpg
+
 #enable network-manager
 exec --no-startup-id nm-applet
 
 #mouse settings
-exec --no-startup-id xinput set-prop 12 274 1 
-exec --no-startup-id xinput set-prop 12 282 1
-
-#set external monitor
-exec --no-startup-id python3 /home/tushar/.setmonitor/setOutput.py
-
-#set wallapper
-exec --no-startup-id feh --bg-fill /usr/share/backgrounds/Cathédrale_Marie-Rheine-du-Monde_by_Thierry_Pon.jpg
-
-
+exec --no-startup-id xinput set-prop 17 274 1
+exec --no-startup-id xinput set-prop 17 287 1

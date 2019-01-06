@@ -16,6 +16,9 @@ dotfiles:
   d_i3:
     dst: ~/.config/i3
     src: config/i3
+  d_setmonitor:
+    dst: ~/.setmonitor
+    src: setmonitor
   d_zsh-autosuggestions:
     dst: ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
     src: oh-my-zsh/custom/plugins/zsh-autosuggestions
@@ -45,6 +48,7 @@ profiles:
     - d_fonts
     - d_zsh-autosuggestions
     - d_i3
+    - d_setmonitor
   work_mac:
     dotfiles:
     - f_vimrc
