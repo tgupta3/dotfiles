@@ -1,0 +1,43 @@
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: dotfiles
+  ignoreempty: false
+  keepdot: false
+  link_by_default: false
+  longkey: false
+  showdiff: false
+  workdir: ~/.config/dotdrop
+dotfiles:
+  d_fonts:
+    dst: ~/.local/share/fonts
+    src: local/share/fonts
+  d_zsh-autosuggestions:
+    dst: ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+    src: oh-my-zsh/custom/plugins/zsh-autosuggestions
+  f_config.cson:
+    dst: ~/.atom/config.cson
+    src: atom/config.cson
+  f_github.cson:
+    dst: ~/.atom/github.cson
+    src: atom/github.cson
+  f_package.list:
+    dst: ~/.atom/package.list
+    src: atom/package.list
+  f_vimrc:
+    dst: ~/.vimrc
+    src: vimrc
+  f_zshrc:
+    dst: ~/.zshrc
+    src: zshrc
+profiles:
+  home:
+    dotfiles:
+    - f_vimrc
+    - f_zshrc
+    - f_config.cson
+    - f_github.cson
+    - f_package.list
+    - d_fonts
+    - d_zsh-autosuggestions
