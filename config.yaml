@@ -16,6 +16,9 @@ dotfiles:
   d_i3:
     dst: ~/.config/i3
     src: config/i3
+  d_scripts:
+    dst: ~/.scripts
+    src: scripts
   d_setmonitor:
     dst: ~/.setmonitor
     src: setmonitor
@@ -49,6 +52,7 @@ profiles:
     - d_zsh-autosuggestions
     - d_i3
     - d_setmonitor
+    - d_scripts
   work_mac:
     dotfiles:
     - f_vimrc
@@ -58,6 +62,7 @@ profiles:
     - f_package.list
     - d_fonts
     - d_zsh-autosuggestions
+    - d_scripts
   work_ubuntu:
     dotfiles:
     - f_vimrc
