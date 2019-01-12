@@ -1,0 +1,7 @@
+nm-applet
+xinput
+playerctl
+nitrogen
+pactl
+tint2
+lxappearance
