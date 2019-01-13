@@ -158,12 +158,16 @@ bindsym $mod+r mode "resize"
 #enable tint2
 exec --no-startup-id tint2
 
-#set wallapper
-exec --no-startup-id feh --bg-scale /usr/share/backgrounds/Cathédrale_Marie-Rheine-du-Monde_by_Thierry_Pon.jpg
-
 #enable network-manager
 exec --no-startup-id nm-applet
 
 #mouse settings
 exec --no-startup-id xinput set-prop 12 274 1 
 exec --no-startup-id xinput set-prop 12 282 1
+
+#set external monitor
+exec --no-startup-id python3 $HOME/.setmonitor/setOutput.py
+
+#set wallpaper
+exec --no-startup-id "nitrogen --restore"
+
