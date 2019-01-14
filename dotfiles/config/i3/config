@@ -170,7 +170,7 @@ client.urgent $urgent-bg-color $urgent-bg-color $text-color #00ff00
 hide_edge_borders both
 
 #Custom Key-Mapping
-bindsym $mod+Shift+x exec i3lock #lockscreen
+bindsym $mod+Shift+x exec $HOME/.scripts/lock.sh #lockscreen
 
 #enable tint2
 exec --no-startup-id tint2
