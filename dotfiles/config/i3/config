@@ -211,3 +211,6 @@ exec --no-startup-id compton
 
 #Run dex to autostart program in autostart folders
 exec --no-startup-id dex -a -s ~/.config/autostart/
+
+#RUn power-manager
+exec --no-startup-id xfce4-power-manager

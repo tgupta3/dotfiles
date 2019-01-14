@@ -14,8 +14,8 @@ dotfiles:
     dst: ~/.local/share/fonts
     src: local/share/fonts
   d_i3:
-    dst: ~/.config/i3
-    src: config/i3
+    dst: ~/.config/i3/config
+    src: config/i3/config
   d_scripts:
     dst: ~/.scripts
     src: scripts
