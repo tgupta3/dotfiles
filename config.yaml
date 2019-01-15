@@ -1,3 +1,5 @@
+actions:
+  executable: chmod +x $HOME/.scripts/*.sh
 config:
   backup: false
   banner: true
@@ -9,8 +11,6 @@ config:
   longkey: false
   showdiff: false
   workdir: ~/.config/dotdrop
-actions:
-  executable: chmod +x $HOME/.scripts/*.sh
 dotfiles:
   d_fonts:
     dst: ~/.local/share/fonts
@@ -18,11 +18,14 @@ dotfiles:
   d_i3:
     dst: ~/.config/i3/config
     src: config/i3/config
+  d_pulseaudio-ctl:
+    dst: ~/.config/pulseaudio-ctl
+    src: config/pulseaudio-ctl
   d_scripts:
+    actions:
+    - executable
     dst: ~/.scripts
     src: scripts
-    actions:
-      - executable
   d_setmonitor:
     dst: ~/.setmonitor
     src: setmonitor
@@ -57,6 +60,7 @@ profiles:
     - d_i3
     - d_setmonitor
     - d_scripts
+    - d_pulseaudio-ctl
   work_mac:
     dotfiles:
     - f_vimrc

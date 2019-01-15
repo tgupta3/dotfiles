@@ -193,9 +193,9 @@ exec --no-startup-id pactl set-sink-mute 0 0
 exec --no-startup-id pactl set-sink-volume 0 25%
 
 #Pulse Audio Controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+ #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%- #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id /usr/bin/pulseaudio-ctl up #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id /usr/bin/pulseaudio-ctl down #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id /usr/bin/pulseaudio-ctl mute # mute sound
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -212,5 +212,8 @@ exec --no-startup-id compton
 #Run dex to autostart program in autostart folders
 exec --no-startup-id dex -a -s ~/.config/autostart/
 
-#RUn power-manager
+#Run power-manager
 exec --no-startup-id xfce4-power-manager
+
+#Run blueman-applet
+exec --no-startup-id /usr/bin/blueman-applet
