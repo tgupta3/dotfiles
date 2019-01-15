@@ -1,5 +1,5 @@
 config:
-  backup: true
+  backup: false
   banner: true
   create: true
   dotpath: dotfiles
@@ -9,6 +9,8 @@ config:
   longkey: false
   showdiff: false
   workdir: ~/.config/dotdrop
+actions:
+  executable: chmod +x $HOME/.scripts/*.sh
 dotfiles:
   d_fonts:
     dst: ~/.local/share/fonts
@@ -19,6 +21,8 @@ dotfiles:
   d_scripts:
     dst: ~/.scripts
     src: scripts
+    actions:
+      - executable
   d_setmonitor:
     dst: ~/.setmonitor
     src: setmonitor
