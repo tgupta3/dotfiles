@@ -9,4 +9,4 @@ SUBSYSTEM=="backlight", ACTION=="add", \
   RUN+="/bin/chgrp video /sys/class/backlight/intel_backlight/brightness", \
   RUN+="/bin/chmod g+w /sys/class/backlight/intel_backlight/brightness"
   RUN+="/bin/chmod a+w /sys/class/backlight/intel_backlight/brightness"
-
+widget.content.gtk-theme-override = ARC Darker
