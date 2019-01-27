@@ -105,13 +105,14 @@ type = internal/battery
 full-at = 99
 battery = ${file:/tmp/battery}
 adapter = ${file:/tmp/AC}
-poll-interval = 5
+poll-interval = 30
 format-full = <label-full>
 format-charging = <label-charging>
 format-discharging = <label-discharging>
 label-full = | Fully Charged
-label-charging = | Charging [%percentage%%]
-label-discharging = | Discharging [%percentage%%]
+label-charging = | Charging [%percentage%%] [%time%]
+label-discharging = | Discharging [%percentage%%] [%time%]
+time-format = %HH:%MM
 
 [module/eth]
 type = internal/network
