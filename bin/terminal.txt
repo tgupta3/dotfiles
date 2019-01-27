@@ -16,3 +16,4 @@ background-transparency-percent=100
 [legacy]
 schema-version=uint32 3
 theme-variant='dark'
+default-show-menubar=false
