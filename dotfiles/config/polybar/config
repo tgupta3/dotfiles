@@ -1,0 +1,144 @@
+[settings]
+screenchange-reload = true
+
+[bar/bar]
+
+monitor = ${env:MONITOR:}
+font-0 = "SourceCodePro+Powerline+Awesome Regular:style=Regular:pixelsize=10;2.25"
+font-1 = "Hack Nerd Font:style=Regular:pixelsize=10;2.25"
+
+
+#scroll-up = i3wm-wsnext
+#scroll-down = i3wm-wsprev
+
+fixed-center = true
+width = 100%
+height = 30
+background = #232422
+foreground = #ffffff
+
+radius = 0.0
+
+# line-size = 1
+# line-color = #f00
+
+# border-size = 2
+# border-color = #00ff00
+padding-left = 1
+padding-right = 1
+module-margin = 0
+
+modules-left = i3 
+modules-center = date
+modules-right = eth wifi pulseaudio battery
+
+tray-position = right
+tray-padding = 0
+tray-detached = false
+tray-background = #232422
+
+[module/i3]
+strip-wsnumbers = true
+type = internal/i3
+format = <label-state> <label-mode>
+#pin-workspaces = true
+
+label-focused = %name%
+label-focused-foreground = #648cf4
+label-focused-background = #232422
+label-focused-underline = #434343
+label-focused-padding = 1
+
+label-unfocused = %name%
+label-unfocused-padding = 1
+
+label-visible = %name%
+label-visible-underline = #555555
+label-visible-padding = 1
+
+label-urgent = %name%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = 1
+
+[module/date]
+type = internal/date
+interval = 1.0
+date = %A, %d %B %H:%M:%S %p
+
+# [module/github]
+# type = internal/github
+
+# ; Accessing an access token stored in file
+# token = ${file:/path/to/file/containing/github/access.token}
+
+# ; Accessing an access token stored in an environment variable
+# token = ${env:GITHUB_ACCESS_TOKEN}
+
+# ; Whether empty notifications should be displayed or not
+# empty-notifications = false
+
+[module/title]
+type = internal/xwindow
+# format-background = #f00
+format-foreground = #f0c674
+format-padding = 1
+label-maxlen = 50
+
+#[module/cpu]
+#type = internal/cpu
+#interval = 0.5
+#format = <label> <ramp-coreload>
+#label = CPU: %percentage%%
+#ramp-coreload-spacing = 1
+#ramp-coreload-0 = ▁
+#ramp-coreload-1 = ▂
+#ramp-coreload-2 = ▃
+#ramp-coreload-3 = ▄
+#ramp-coreload-4 = ▅
+#ramp-coreload-5 = ▆
+#ramp-coreload-6 = ▇
+#ramp-coreload-7 = █
+
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = ${file:/tmp/battery}
+adapter = ${file:/tmp/AC}
+poll-interval = 5
+format-full = <label-full>
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+label-full = | Fully Charged
+label-charging = | Charging [%percentage%%]
+label-discharging = | Discharging [%percentage%%]
+
+[module/eth]
+type = internal/network
+interface = eth0
+interval = 3.0
+format-connected = "  <label-connected> "
+format-disconnected = "  <label-disconnected> "
+label-connected = IP=%local_ip% |
+label-disconnected = No connection |
+
+
+[module/wifi]
+type = internal/network
+interface = wlan0
+interval = 3.0
+format-connected = "  <label-connected>"
+format-disconnected = "  <label-disconnected>"
+label-connected = IP=%local_ip% |
+label-disconnected = No connection |
+
+[module/pulseaudio]
+type = internal/pulseaudio
+use-ui-max = true
+interval = 5
+format-volume = "<ramp-volume> <label-volume> "
+label-muted = "  Muted "
+ramp-volume-0 =" "
+ramp-volume-1 =" "
+ramp-volume-2 =" 墳"
+

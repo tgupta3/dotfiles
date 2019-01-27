@@ -9,6 +9,9 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+#set external monitor
+exec --no-startup-id python3 $HOME/.setmonitor/setOutput.py
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -172,25 +175,23 @@ hide_edge_borders both
 #Custom Key-Mapping
 bindsym $mod+Shift+x exec $HOME/.scripts/lock.sh #lockscreen
 
-#enable tint2
-exec --no-startup-id tint2
-
-#enable network-manager
-exec --no-startup-id nm-applet
-
 #mouse settings
 exec --no-startup-id xinput set-prop 12 274 1
 exec --no-startup-id xinput set-prop 12 282 1
 
-#set external monitor
-exec --no-startup-id python3 $HOME/.setmonitor/setOutput.py
-
 #set wallpaper
 exec --no-startup-id nitrogen --restore &
+
+#enable tint2
+#exec_always --no-startup-id tint2
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
 
 #unmute & set volume
 exec --no-startup-id pactl set-sink-mute 0 0
 exec --no-startup-id pactl set-sink-volume 0 25%
+
+#enable network-manager
+exec --no-startup-id nm-applet
 
 #Pulse Audio Controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id /usr/bin/pulseaudio-ctl up #increase sound volume

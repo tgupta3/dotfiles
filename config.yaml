@@ -18,6 +18,9 @@ dotfiles:
   d_i3:
     dst: ~/.config/i3/config
     src: config/i3/config
+  d_polybar:
+    dst: ~/.config/polybar
+    src: config/polybar
   d_pulseaudio-ctl:
     dst: ~/.config/pulseaudio-ctl
     src: config/pulseaudio-ctl
@@ -61,6 +64,7 @@ profiles:
     - d_setmonitor
     - d_scripts
     - d_pulseaudio-ctl
+    - d_polybar
   work_mac:
     dotfiles:
     - f_vimrc
