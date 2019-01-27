@@ -65,8 +65,8 @@ label-urgent-padding = 1
 
 [module/date]
 type = internal/date
-interval = 1.0
-date = %A, %d %B %H:%M:%S %p
+interval = 30.0
+date = %A, %d %B %H:%M %p %Z
 
 # [module/github]
 # type = internal/github
