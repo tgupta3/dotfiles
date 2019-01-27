@@ -182,10 +182,6 @@ exec --no-startup-id xinput set-prop 12 282 1
 #set wallpaper
 exec --no-startup-id nitrogen --restore &
 
-#enable tint2
-#exec_always --no-startup-id tint2
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
-
 #unmute & set volume
 exec --no-startup-id pactl set-sink-mute 0 0
 exec --no-startup-id pactl set-sink-volume 0 25%
@@ -218,3 +214,9 @@ exec --no-startup-id xfce4-power-manager
 
 #Run blueman-applet
 exec --no-startup-id /usr/bin/blueman-applet
+
+#enable tint2
+#exec_always --no-startup-id tint2
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
+
+
