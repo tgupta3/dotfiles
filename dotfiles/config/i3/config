@@ -204,7 +204,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86MonBrightnessUp exec light -A 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 20 # decrease screen brightness
 #Run Comptom
-exec --no-startup-id compton
+exec --no-startup-id compton --config $HOME/.config/compton/config 
 
 #Run dex to autostart program in autostart folders
 exec --no-startup-id dex -a -s ~/.config/autostart/
@@ -220,3 +220,8 @@ exec --no-startup-id /usr/bin/blueman-applet
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
 
 
+gaps inner 5
+gaps outer 5
+smart_gaps on
+# Disable window titlebars entirely
+for_window [class="^.*"] border pixel 2

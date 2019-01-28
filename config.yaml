@@ -12,6 +12,9 @@ config:
   showdiff: false
   workdir: ~/.config/dotdrop
 dotfiles:
+  d_compton:
+    dst: ~/.config/compton
+    src: config/compton
   d_fonts:
     dst: ~/.local/share/fonts
     src: local/share/fonts
@@ -69,6 +72,7 @@ profiles:
     - d_pulseaudio-ctl
     - d_polybar
     - f_xresources
+    - d_compton
   work_mac:
     dotfiles:
     - f_vimrc
