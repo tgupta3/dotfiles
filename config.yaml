@@ -38,6 +38,9 @@ dotfiles:
   d_zsh-autosuggestions:
     dst: ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
     src: oh-my-zsh/custom/plugins/zsh-autosuggestions
+  d_zsh-syntax-highlighting:
+    dst: ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+    src: oh-my-zsh/custom/plugins/zsh-syntax-highlighting
   f_config.cson:
     dst: ~/.atom/config.cson
     src: atom/config.cson
@@ -73,6 +76,7 @@ profiles:
     - d_polybar
     - f_xresources
     - d_compton
+    - d_zsh-syntax-highlighting
   work_mac:
     dotfiles:
     - f_vimrc
@@ -83,9 +87,11 @@ profiles:
     - d_fonts
     - d_zsh-autosuggestions
     - d_scripts
+    - d_zsh-syntax-highlighting
   work_ubuntu:
     dotfiles:
     - f_vimrc
     - f_zshrc
     - d_fonts
     - d_zsh-autosuggestions
+    - d_zsh-syntax-highlighting
