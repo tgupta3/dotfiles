@@ -34,7 +34,6 @@ modules-right = cpu mem eth wifi pulseaudio battery
 tray-position = right
 tray-padding = 0
 tray-detached = false
-tray-background = #232422
 
 [module/i3]
 #strip-wsnumbers = true
@@ -113,17 +112,17 @@ format-discharging = <label-discharging>
 format-charging-underline = #9f78e1
 format-discharging-underline = ${self.format-charging-underline}
 format-full-underline = ${self.format-charging-underline}
-label-full = Fully Charged
-label-charging = Charging %percentage%% (%time%)
-label-discharging = Discharging %percentage%% (%time%)
+label-full = "Fully Charged "
+label-charging = "Charging %percentage%% (%time%) "
+label-discharging = "Discharging %percentage%% (%time%) "
 time-format = %HH:%MM
 
 [module/eth]
 type = internal/network
 interface = eth0
 interval = 3.0
-format-connected = "  <label-connected> "
-format-disconnected = "  <label-disconnected> "
+format-connected = " <label-connected>"
+format-disconnected = " <label-disconnected>"
 label-connected = IP=%local_ip%
 label-disconnected = No connection
 format-connected-underline = #55cc55
