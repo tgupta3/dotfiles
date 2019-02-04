@@ -11,7 +11,7 @@
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 POWERLEVEL9K_MODE="nerdfont-complete"
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(statusi vi_mode)
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
   POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time ssh context dir vcs)
 else
@@ -76,6 +76,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  vi-mode
   git
   aws
   pip
@@ -133,3 +134,14 @@ export DOTDROP_PROFILE=work_ubuntu
 
 #Bindkey for move forward word
 bindkey '^ ' vi-forward-blank-word
+
+# Beginning search with arrow keys
+bindkey "^[OA" up-line-or-beginning-search
+bindkey "^[OB" down-line-or-beginning-search
+
+# Vi mode
+bindkey -v
+
+# lower delay
+export KEYTIMEOUT=1
+
