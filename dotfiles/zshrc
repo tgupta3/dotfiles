@@ -129,6 +129,8 @@ ssh-add -K ~/linux_instance.pem
 export DOTDROP_PROFILE=home
 {%@@ elif profile == "work_ubuntu" @@%}
 export DOTDROP_PROFILE=work_ubuntu
+{%@@ elif profile == "apollo" @@%}
+export DOTDROP_PROFILE=apollo
 {%@@ endif @@%}
 
 
