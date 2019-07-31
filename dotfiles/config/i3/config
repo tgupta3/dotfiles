@@ -176,8 +176,8 @@ hide_edge_borders both
 bindsym $mod+Shift+x exec $HOME/.scripts/lock.sh #lockscreen
 
 #mouse settings
-exec --no-startup-id xinput set-prop 12 274 1
-exec --no-startup-id xinput set-prop 12 282 1
+exec --no-startup-id xinput set-prop 11 274 1
+exec --no-startup-id xinput set-prop 11 282 1
 
 #set wallpaper
 exec --no-startup-id nitrogen --restore &

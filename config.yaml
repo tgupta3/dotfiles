@@ -7,10 +7,11 @@ config:
   dotpath: dotfiles
   ignoreempty: false
   keepdot: false
-  link_by_default: false
   longkey: false
   showdiff: false
   workdir: ~/.config/dotdrop
+  link_on_import: nolink
+  minversion: 0.29.4
 dotfiles:
   d_compton:
     dst: ~/.config/compton
