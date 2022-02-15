@@ -1,0 +1,14 @@
+{
+    "terminal.integrated.fontFamily": "Hack Nerd Font",
+    "editor.fontSize": 21,
+    "terminal.integrated.fontSize": 21,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "files.trimTrailingWhitespace": true,
+    "python.formatting.provider": "black",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    }
+}
