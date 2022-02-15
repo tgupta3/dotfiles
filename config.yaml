@@ -63,6 +63,9 @@ dotfiles:
   f_vscode:
     dst: ~/.vscode_settings.json
     src: vscode_settings.json
+  f_mac_terminal:
+    dst: ~/dark.terminal
+    src: dark.terminal
 profiles:
   home:
     dotfiles:
@@ -89,6 +92,7 @@ profiles:
     - f_github.cson
     - f_package.list
     - f_vscode
+    - f_mac_terminal
     - d_fonts
     - d_zsh-autosuggestions
     - d_scripts
