@@ -78,14 +78,6 @@ profiles:
     - f_xresources
     - d_compton
     - d_zsh-syntax-highlighting
-  apollo:
-    dotfiles:
-    - f_vimrc
-    - f_zshrc
-    - d_fonts
-    - d_zsh-autosuggestions
-    - d_zsh-syntax-highlighting
-    - d_scripts
   work_mac:
     dotfiles:
     - f_vimrc
