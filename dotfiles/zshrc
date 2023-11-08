@@ -131,6 +131,9 @@ bindkey '^ ' vi-forward-blank-word
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 
+# Change Highlight color for zsh-autosuggest for solenoid dark
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
+
 {%@@ if profile == "work_mac" @@%}
 export DOTDROP_PROFILE=work_mac  
 source ~/.iterm2_shell_integration.zsh
